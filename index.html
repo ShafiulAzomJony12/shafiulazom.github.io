@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shafiul Azom | Freelancer Portfolio</title>
+    <meta name="description" content="Shafiul Azom - Data Entry Specialist, Virtual Assistant, Web Researcher, Graphic Designer, Video Editor and IT Support.">
+
+    <style>
+        *{margin:0;padding:0;box-sizing:border-box;scroll-behavior:smooth}
+        body{font-family:Arial,Helvetica,sans-serif;background:#f7f9fc;color:#1f2937;line-height:1.6}
+        a{text-decoration:none;color:inherit}
+        .container{width:90%;max-width:1150px;margin:auto}
+        .section{padding:90px 0}
+        .section-title{text-align:center;margin-bottom:50px}
+        .section-title h2{font-size:38px;color:#111827;margin-bottom:12px}
+        .section-title p{color:#6b7280;max-width:650px;margin:auto}
+        .btn{display:inline-block;padding:13px 25px;border-radius:8px;font-weight:600;transition:.3s}
+        .btn-primary{background:#2563eb;color:#fff}
+        .btn-primary:hover{background:#1d4ed8;transform:translateY(-2px)}
+        .btn-outline{border:2px solid #2563eb;color:#2563eb;margin-left:10px}
+        .btn-outline:hover{background:#2563eb;color:#fff}
+
+        header{background:#fff;position:sticky;top:0;z-index:999;box-shadow:0 2px 15px rgba(0,0,0,.06)}
+        nav{height:75px;display:flex;justify-content:space-between;align-items:center}
+        .logo{font-size:25px;font-weight:800;color:#2563eb}
+        .logo span{color:#111827}
+        .nav-links{display:flex;list-style:none;gap:28px}
+        .nav-links a{font-size:15px;font-weight:600;color:#374151;transition:.3s}
+        .nav-links a:hover{color:#2563eb}
+
+        .hero{min-height:90vh;display:flex;align-items:center;background:linear-gradient(135deg,#eff6ff,#fff)}
+        .hero-content{display:grid;grid-template-columns:1.2fr .8fr;align-items:center;gap:50px}
+        .hero-text small{display:inline-block;color:#2563eb;background:#dbeafe;padding:7px 15px;border-radius:30px;font-weight:600;margin-bottom:20px}
+        .hero-text h1{font-size:55px;line-height:1.15;color:#111827;margin-bottom:20px}
+        .hero-text h1 span{color:#2563eb}
+        .hero-text h3{font-size:23px;color:#4b5563;margin-bottom:18px}
+        .hero-text p{color:#6b7280;max-width:650px;margin-bottom:30px}
+        .hero-buttons{margin-bottom:30px}
+        .hero-image{display:flex;justify-content:center}
+        .profile-box{width:330px;height:330px;border-radius:50%;background:linear-gradient(135deg,#2563eb,#60a5fa);padding:10px;box-shadow:0 20px 50px rgba(37,99,235,.25)}
+        .profile-box img{width:100%;height:100%;border-radius:50%;object-fit:cover;background:#fff}
+        .social-links{display:flex;gap:15px}
+        .social-links a{width:42px;height:42px;display:flex;justify-content:center;align-items:center;border-radius:50%;background:#fff;border:1px solid #e5e7eb;color:#2563eb;font-weight:bold;transition:.3s}
+        .social-links a:hover{background:#2563eb;color:#fff;transform:translateY(-3px)}
+
+        .about{background:#fff}
+        .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+        .about-text h3{font-size:30px;margin-bottom:20px}
+        .about-text p{color:#6b7280;margin-bottom:15px}
+        .about-info{display:grid;grid-template-columns:1fr 1fr;gap:15px}
+        .info-card{background:#f8fafc;padding:20px;border-radius:12px;border:1px solid #e5e7eb}
+        .info-card strong{display:block;color:#111827;margin-bottom:5px}
+        .info-card span{color:#6b7280;font-size:14px}
+
+        .services{background:#f7f9fc}
+        .service-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:25px}
+        .service-card{background:#fff;padding:30px;border-radius:15px;border:1px solid #e5e7eb;transition:.3s}
+        .service-card:hover{transform:translateY(-8px);box-shadow:0 15px 35px rgba(0,0,0,.08)}
+        .service-icon{width:55px;height:55px;display:flex;align-items:center;justify-content:center;background:#dbeafe;color:#2563eb;border-radius:12px;font-size:25px;margin-bottom:20px}
+        .service-card h3{margin-bottom:12px;color:#111827}
+        .service-card p{color:#6b7280;font-size:15px}
+
+        .portfolio{background:#fff}
+        .portfolio-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:25px}
+        .portfolio-card{border-radius:15px;overflow:hidden;background:#f8fafc;border:1px solid #e5e7eb;transition:.3s}
+        .portfolio-card:hover{transform:translateY(-6px);box-shadow:0 15px 35px rgba(0,0,0,.08)}
+        .portfolio-image{height:210px;background:linear-gradient(135deg,#dbeafe,#eff6ff);display:flex;justify-content:center;align-items:center;font-size:55px}
+        .portfolio-content{padding:25px}
+        .portfolio-content h3{margin-bottom:10px}
+        .portfolio-content p{color:#6b7280;font-size:14px}
+        .tag{display:inline-block;margin-top:15px;background:#dbeafe;color:#2563eb;padding:5px 10px;border-radius:20px;font-size:12px;font-weight:bold}
+
+        .skills{background:#f7f9fc}
+        .skills-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px}
+        .skill{margin-bottom:22px}
+        .skill-info{display:flex;justify-content:space-between;margin-bottom:7px;font-weight:600}
+        .progress{height:9px;background:#e5e7eb;border-radius:20px;overflow:hidden}
+        .progress span{display:block;height:100%;background:#2563eb;border-radius:20px}
+
+        .experience{background:#fff}
+        .timeline{max-width:850px;margin:auto;position:relative}
+        .timeline:before{content:"";position:absolute;left:18px;top:0;bottom:0;width:2px;background:#dbeafe}
+        .timeline-item{position:relative;padding-left:60px;margin-bottom:40px}
+        .timeline-dot{position:absolute;left:7px;top:5px;width:24px;height:24px;border-radius:50%;background:#2563eb;border:5px solid #dbeafe}
+        .timeline-item h3{color:#111827;margin-bottom:5px}
+        .timeline-item h4{color:#2563eb;margin-bottom:8px}
+        .timeline-item span{color:#9ca3af;font-size:14px}
+        .timeline-item p{margin-top:10px;color:#6b7280}
+
+        .contact{background:#f7f9fc}
+        .contact-box{background:#111827;color:#fff;padding:60px;border-radius:20px;text-align:center}
+        .contact-box h2{font-size:38px;margin-bottom:15px}
+        .contact-box p{color:#d1d5db;max-width:650px;margin:0 auto 30px}
+        .contact-details{display:flex;justify-content:center;gap:30px;flex-wrap:wrap;margin-top:30px}
+        .contact-details span{color:#d1d5db}
+
+        footer{background:#0b1120;color:#9ca3af;text-align:center;padding:25px;font-size:14px}
+
+        @media(max-width:900px){
+            .hero-content,.about-grid{grid-template-columns:1fr}
+            .hero{padding:80px 0}
+            .hero-text{text-align:center}
+            .hero-text p{margin-left:auto;margin-right:auto}
+            .social-links{justify-content:center}
+            .service-grid,.portfolio-grid{grid-template-columns:repeat(2,1fr)}
+            .hero-image{order:-1}
+        }
+        @media(max-width:650px){
+            .nav-links{display:none}
+            .hero-text h1{font-size:40px}
+            .hero-text h3{font-size:19px}
+            .profile-box{width:240px;height:240px}
+            .service-grid,.portfolio-grid,.skills-grid{grid-template-columns:1fr}
+            .section{padding:65px 0}
+            .section-title h2{font-size:30px}
+            .contact-box{padding:40px 20px}
+            .contact-box h2{font-size:30px}
+            .btn{padding:11px 18px}
+            .btn-outline{margin-left:5px}
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <div class="container">
+        <nav>
+            <a href="#home" class="logo">Shafiul<span>.</span></a>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<section class="hero" id="home">
+    <div class="container">
+        <div class="hero-content">
+            <div class="hero-text">
+                <small>Available for Freelance Work</small>
+                <h1>Hi, I'm <span>Shafiul Azom</span></h1>
+                <h3>Data Entry Specialist & Digital Freelancer</h3>
+                <p>I help businesses with accurate Data Entry, Web Research, Virtual Assistance, Graphic Design, Video Editing and IT Support.</p>
+                <div class="hero-buttons">
+                    <a href="#portfolio" class="btn btn-primary">View My Work</a>
+                    <a href="#contact" class="btn btn-outline">Hire Me</a>
+                </div>
+                <div class="social-links">
+                    <a href="#" title="Upwork">U</a>
+                    <a href="#" title="Fiverr">F</a>
+                    <a href="#" title="LinkedIn">in</a>
+                    <a href="#" title="Facebook">f</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="profile-box">
+                    <img src="https://i.imgur.com/QPGTMjy.png" alt="Shafiul Azom">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section about" id="about">
+    <div class="container">
+        <div class="section-title">
+            <h2>About Me</h2>
+            <p>Professional, reliable and detail-oriented freelancer ready to help your business.</p>
+        </div>
+        <div class="about-grid">
+            <div class="about-text">
+                <h3>Turning Your Tasks Into Results</h3>
+                <p>I am a dedicated freelancer from Bangladesh with professional experience in IT support, data management, web research and digital services.</p>
+                <p>I believe in accuracy, fast communication, professional work and on-time delivery.</p>
+                <p>Whether you need simple data entry or complete virtual assistance, I am ready to support your project.</p>
+            </div>
+            <div class="about-info">
+                <div class="info-card"><strong>Location</strong><span>Bangladesh</span></div>
+                <div class="info-card"><strong>Experience</strong><span>IT & Digital Services</span></div>
+                <div class="info-card"><strong>Availability</strong><span>Freelance Projects</span></div>
+                <div class="info-card"><strong>Languages</strong><span>English & Bangla</span></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section services" id="services">
+    <div class="container">
+        <div class="section-title">
+            <h2>My Services</h2>
+            <p>Services I can provide for individuals and businesses.</p>
+        </div>
+        <div class="service-grid">
+            <div class="service-card"><div class="service-icon">📊</div><h3>Data Entry</h3><p>Excel, Google Sheets, copy paste, PDF conversion, data cleaning and formatting.</p></div>
+            <div class="service-card"><div class="service-icon">🔎</div><h3>Web Research</h3><p>Online research, data collection, company research and contact information.</p></div>
+            <div class="service-card"><div class="service-icon">💼</div><h3>Virtual Assistant</h3><p>Administrative support, file management, email assistance and online tasks.</p></div>
+            <div class="service-card"><div class="service-icon">🎨</div><h3>Banner Design</h3><p>Social media banners, advertisements, promotional graphics and thumbnails.</p></div>
+            <div class="service-card"><div class="service-icon">🎬</div><h3>Video Editing</h3><p>YouTube, Facebook, Reels and promotional video editing with text and subtitles.</p></div>
+            <div class="service-card"><div class="service-icon">💻</div><h3>IT Support</h3><p>Computer, network, printer, CCTV, IP phone and basic server support.</p></div>
+        </div>
+    </div>
+</section>
+
+<section class="section portfolio" id="portfolio">
+    <div class="container">
+        <div class="section-title">
+            <h2>My Portfolio</h2>
+            <p>Some examples of services and projects I can provide.</p>
+        </div>
+        <div class="portfolio-grid">
+            <div class="portfolio-card"><div class="portfolio-image">📊</div><div class="portfolio-content"><h3>Excel Data Entry</h3><p>Organized and formatted raw information into a clean Excel spreadsheet.</p><span class="tag">Data Entry</span></div></div>
+            <div class="portfolio-card"><div class="portfolio-image">🔎</div><div class="portfolio-content"><h3>Web Research</h3><p>Collected online information and organized it into structured data.</p><span class="tag">Research</span></div></div>
+            <div class="portfolio-card"><div class="portfolio-image">📋</div><div class="portfolio-content"><h3>Lead Generation</h3><p>Business and contact information collected and organized for marketing.</p><span class="tag">Lead Generation</span></div></div>
+            <div class="portfolio-card"><div class="portfolio-image">📄</div><div class="portfolio-content"><h3>PDF to Excel</h3><p>Converted PDF information into editable Excel spreadsheets.</p><span class="tag">Data Conversion</span></div></div>
+            <div class="portfolio-card"><div class="portfolio-image">🎨</div><div class="portfolio-content"><h3>Social Media Banner</h3><p>Professional promotional banner designs for social media.</p><span class="tag">Graphic Design</span></div></div>
+            <div class="portfolio-card"><div class="portfolio-image">🎬</div><div class="portfolio-content"><h3>Video Editing</h3><p>Short-form social media and promotional video editing.</p><span class="tag">Video Editing</span></div></div>
+        </div>
+    </div>
+</section>
+
+<section class="section skills" id="skills">
+    <div class="container">
+        <div class="section-title">
+            <h2>My Skills</h2>
+            <p>Tools and skills I use for professional projects.</p>
+        </div>
+        <div class="skills-grid">
+            <div>
+                <div class="skill"><div class="skill-info"><span>Data Entry</span><span>95%</span></div><div class="progress"><span style="width:95%"></span></div></div>
+                <div class="skill"><div class="skill-info"><span>Microsoft Excel</span><span>90%</span></div><div class="progress"><span style="width:90%"></span></div></div>
+                <div class="skill"><div class="skill-info"><span>Web Research</span><span>90%</span></div><div class="progress"><span style="width:90%"></span></div></div>
+                <div class="skill"><div class="skill-info"><span>Virtual Assistance</span><span>85%</span></div><div class="progress"><span style="width:85%"></span></div></div>
+            </div>
+            <div>
+                <div class="skill"><div class="skill-info"><span>Graphic Design</span><span>80%</span></div><div class="progress"><span style="width:80%"></span></div></div>
+                <div class="skill"><div class="skill-info"><span>Video Editing</span><span>80%</span></div><div class="progress"><span style="width:80%"></span></div></div>
+                <div class="skill"><div class="skill-info"><span>IT Support</span><span>90%</span></div><div class="progress"><span style="width:90%"></span></div></div>
+                <div class="skill"><div class="skill-info"><span>Google Workspace</span><span>85%</span></div><div class="progress"><span style="width:85%"></span></div></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section experience" id="experience">
+    <div class="container">
+        <div class="section-title">
+            <h2>Work Experience</h2>
+            <p>My professional career and technical experience.</p>
+        </div>
+        <div class="timeline">
+            <div class="timeline-item"><div class="timeline-dot"></div><h3>Senior IT Officer</h3><h4>Kido Dhaka Co., Ltd.</h4><span>Nov 2024 – Present</span><p>Network monitoring, troubleshooting, hardware and software support, MikroTik, server, IP camera, NVR, IP telephone, user support and IT documentation.</p></div>
+            <div class="timeline-item"><div class="timeline-dot"></div><h3>Senior IT Officer</h3><h4>Wide Tech BD</h4><span>Dec 2022 – Oct 2024</span><p>Hardware, networking, printer, Windows Server, email and general IT support.</p></div>
+            <div class="timeline-item"><div class="timeline-dot"></div><h3>Python Trainer</h3><h4>Bangladesh Hi-Tech Park</h4><span>Sep 2022 – Nov 2022</span><p>Conducted Python programming training and supported learners with practical programming tasks.</p></div>
+            <div class="timeline-item"><div class="timeline-dot"></div><h3>Full-Stack Developer & Trainer</h3><h4>MateRoyal IT</h4><span>Jan 2022 – Aug 2022</span><p>Worked with PHP, Laravel, JavaScript, jQuery, Node.js REST API and MySQL.</p></div>
+			<div class="timeline-item"><div class="timeline-dot"></div><h3>Application Developer </h3><h4>Noman Group</h4><span>June 2021 – September 2021</span><p>Worked with PHP, Laravel, JavaScript, jQuery, Node.js REST API and MySQL.</p></div>
+       <div class="timeline-item"><div class="timeline-dot"></div><h3>Web Developer</h3><h4>Sun IT Limited</h4><span>January 2021 – May 2021 </span><p> PHP | WordPress | MySQL | Web Development.</p></div>
+		<div class="timeline-item"><div class="timeline-dot"></div><h3>Web Application Developer & Trainer</h3><h4>Silkcity Solution </h4><span>December 2018 – August 2019</span><p>C# | ASP.NET | ASP.NET MVC | ASP.NET Web API | ASP.NET Core | SQL. </p></div>
+		</div>
+    </div>
+</section>
+
+<section class="section contact" id="contact">
+    <div class="container">
+        <div class="contact-box">
+            <h2>Let's Work Together</h2>
+            <p>Have a project in mind? I am available for Data Entry, Web Research, Virtual Assistance, Graphic Design, Video Editing and IT Support.</p>
+            <a href="mailto:shafiulazom470@gmail.com" class="btn btn-primary">Contact Me</a>
+            <div class="contact-details">
+                <span>📧 shafiulazom470@gmail.com</span>
+                <span>📱 +880 1303217438</span>
+                <span>📍 Bangladesh</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <p>© 2026 Shafiul Azom. All Rights Reserved.</p>
+</footer>
+
+</body>
+</html>
